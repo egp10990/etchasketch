@@ -1,3 +1,9 @@
-.container {
-    display:flex;
+body {
+    display: inline-block;
+}
+
+div {
+    background-color: black;
+    height: 60px;
+    width: 60px;
 }
