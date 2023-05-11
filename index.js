@@ -7,5 +7,5 @@ function generateGrid() {
   document.body.appendChild(sketchContainer);
   sketchContainer.classList.add("sketchContainer");
 
-sketchContainer.addEventListener("mouseover", changeColor);
+  sketchContainer.addEventListener("mouseover", changeColor);
 }
