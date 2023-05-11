@@ -1,9 +1,25 @@
 body {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
 }
 
-div {
-    background-color: black;
-    height: 60px;
-    width: 60px;
+.reset {
+    align-self: flex-start;
+    background-color: rgb(255, 0, 34);
+    font-family: OCR A Std, monospace;
+    font-size: x-large;
+}
+
+.sketchContainer {
+    width: 900px;
+    height: 900px;
+    border: solid 1px black;
+    display: grid;
+    align-self: center;
+    grid-template-rows: repeat(16, auto);
+    grid-template-columns: repeat(16, auto);
+
+}
+div.tileHovered {
+    background-color: #ff2dae;
 }
