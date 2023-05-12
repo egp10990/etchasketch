@@ -3,23 +3,18 @@ body {
     flex-direction: column;
 }
 
-.reset {
+.clear {
     align-self: flex-start;
     background-color: rgb(255, 0, 34);
     font-family: OCR A Std, monospace;
     font-size: x-large;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    margin-top: 50px;
 }
 
-.sketchContainer {
-    width: 900px;
-    height: 900px;
-    border: solid 1px black;
-    display: grid;
-    align-self: center;
-    grid-template-rows: repeat(16, auto);
-    grid-template-columns: repeat(16, auto);
+label, input {
+    font-family: OCR A Std, monospace;
+    margin-left: 100px;
+}
 
-}
-div.tileHovered {
-    background-color: #ff48b9;
-}
