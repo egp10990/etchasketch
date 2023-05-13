@@ -1,6 +1,24 @@
-body {
-    display: flex;
+
+.textcontainer {
+    display:flex;
     flex-direction: column;
+    width: 300px;
+}
+
+.etchasketch {
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+    display: grid;
+    flex-direction: column;
+    float: right;
+    margin-left: 100px;
+    border: solid 1px black;
+    width: 520px;
+    height: 520px;
+    
 }
 
 .clear {
@@ -8,13 +26,53 @@ body {
     background-color: rgb(255, 0, 34);
     font-family: OCR A Std, monospace;
     font-size: x-large;
-    margin-left: 100px;
-    margin-bottom: 100px;
-    margin-top: 50px;
+    margin-left: 80px;
+    margin-top: 30px;
+    margin-bottom: 60px;
 }
 
-label, input {
+.gridsize {
+    margin-left: 80px;
+}
+
+.changecolor {
     font-family: OCR A Std, monospace;
-    margin-left: 100px;
+    font-size:x-large;
+    padding: 3px;
+    margin-left: 80px;
+}
+
+.changecolorbox {
+    margin-left: 80px;
+}
+
+.sizeofgrid {
+    font-family: OCR A Std, monospace;
+    font-size:x-large;
+    padding: 3px;
+    margin-left: 80px;
+}
+
+.submit {
+    margin-left: 80px;
+    margin-bottom: 70px;
+    font-family: OCR A Std, monospace;
+    font-size:medium;
+    background-color: rgb(255, 0, 34);
+}
+
+.black {
+    margin-left: 80px;
+    font-family: OCR A Std, monospace;
+    font-size: medium;
+    background-color: rgb(255, 0, 34);
+}
+
+.rainbow {
+    margin-left: 80px;
+    font-family: OCR A Std, monospace;
+    font-size: medium;
+    background-color: rgb(255, 0, 34);
+    margin-left: 10px;
 }
 
