@@ -6,22 +6,28 @@ const black = document.querySelector(".black");
 const rainbow = document.querySelector(".rainbow");
 
 
-function createGrid(rows = 16, columns = 16) {
+function createGrid(rows, columns) {
   let total = (rows * columns);
   for(let i = 0; i < total; i++) {
-    let childDiv = document.createElement('childdiv' + i);
-    childDiv.classList.add('childdiv' + i);
+    let childDiv = document.createElement('childdiv');
+    childDiv.classList.add('childdiv');
     container.style.setProperty('grid-template-columns', `repeat(${columns}, 2fr)`);
     container.style.setProperty('grid-template-rows', `repeat(${rows}, 2fr)`);
     container.appendChild(childDiv);
+    childDiv.addEventListener("mouseover", mouseOver);
   }
 };
+
 createGrid(16,16);
 
-var divs = document.getElementsByClassName('childdiv' + i);
-var mainDiv = document.getElementById('childdiv0');
-for (var i = 0; i < divs.length; i++) {
-    divs[i].addEventListener('mouseover', function () {
-        mainDiv.style.backgroundColor = window.getComputedStyle(this).backgroundColor;
-    });
-  }
+function mouseOver () {
+  let childDiv = document.querySelector(".childdiv");
+  childDiv.style.backgroundColor = "black"; 
+}
+
+
+
+   
+ 
+
+
