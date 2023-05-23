@@ -1,9 +1,5 @@
 const container = document.querySelector(".container");
 const clear = document.querySelector(".clear");
-const gridSize = document.querySelector(".gridsize");
-const submit = document.querySelector(".submit");
-const black = document.querySelector(".black");
-const rainbow = document.querySelector(".rainbow");
 
 
 function createGrid(rows, cols) {
@@ -24,6 +20,19 @@ function changeColor (event) {
   const square = event.target;
   square.style.backgroundColor = "black";
 }
+
+const button = document.getElementById('clear');
+button.addEventListener('click', newGrid);
+    
+function getNewGrid() {
+    container.innerText = '';
+}
+
+function newGrid(){
+    getNewGrid();
+      let number = prompt("How many squares per side for the new grid?" );
+       createGrid(number);
+};
 
 
 
