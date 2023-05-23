@@ -6,25 +6,28 @@ const black = document.querySelector(".black");
 const rainbow = document.querySelector(".rainbow");
 
 
-function createGrid(rows, columns) {
-  let total = (rows * columns);
-  for(let i = 0; i < total; i++) {
-    let childDiv = document.createElement('childdiv');
-    childDiv.classList.add('childdiv' +i);
-    container.style.setProperty('grid-template-columns', `repeat(${columns}, 2fr)`);
-    container.style.setProperty('grid-template-rows', `repeat(${rows}, 2fr)`);
-    container.appendChild(childDiv);
-    childDiv.addEventListener("mouseover", mouseOver);
-    
-  }   
-};
+function createGrid(rows, cols) {
+  container.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+  container.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+
+  for (let i = 0; i < rows * cols; i++) {
+    const square = document.createElement('div');
+    square.classList.add('square');
+    square.addEventListener('mouseover', changeColor);
+    container.appendChild(square);
+  }
+}
 
 createGrid(16,16);
 
-function mouseOver () {
-  const childDiv = document.querySelectorAll(".childdiv0, .childdiv1");
-  childDiv.forEach(childDiv => childDiv.style.backgroundColor = "black");
+function changeColor (event) {
+  const square = event.target;
+  square.style.backgroundColor = "black";
 }
+
+
+
+
 
 
 
