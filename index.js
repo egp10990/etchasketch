@@ -30,6 +30,13 @@ function clearGrid() {
 
 clearGrid();
 
+function newGridSize () {
+  sizeButton.addEventListener('click', () =>
+    prompt("What size would you like you Etch-a-Sketch to be?"));
+}
+
+newGridSize();
+
 
 
 
