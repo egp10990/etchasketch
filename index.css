@@ -30,3 +30,13 @@
     margin-bottom: 60px;
 }
 
+.newgridsize {
+    align-self: flex-start;
+    background-color: rgb(255, 0, 34);
+    font-family: OCR A Std, monospace;
+    font-size: x-large;
+    margin-left: 60px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+

@@ -1,5 +1,7 @@
-const container = document.querySelector(".container");
-const clear = document.querySelector(".clear");
+const container = document.querySelector('.container');
+const square = document.getElementsByClassName('.square');
+const sizeButton = document.querySelector('.newgridsize');
+const clearButton = document.querySelector('.clear');
 
 
 function createGrid(rows, cols) {
@@ -18,22 +20,15 @@ createGrid(16,16);
 
 function changeColor (event) {
   const square = event.target;
-  square.style.backgroundColor = "black";
+  square.style.backgroundColor = 'black';
 }
 
-const button = document.getElementById('clear');
-button.addEventListener('click', newGrid);
-    
-function getNewGrid() {
-    container.innerText = '';
+function clearGrid() {
+  clearButton.addEventListener('click', () =>
+    location.reload());
 }
 
-function newGrid(){
-    getNewGrid();
-      let number = prompt("How many squares per side for the new grid?" );
-       createGrid(number);
-};
-
+clearGrid();
 
 
 
