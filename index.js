@@ -30,12 +30,21 @@ function clearGrid() {
 
 clearGrid();
 
-function newGridSize () {
-  sizeButton.addEventListener('click', () =>
-    prompt("What size would you like you Etch-a-Sketch to be?"));
+sizeButton.addEventListener("click", newGridSize);
+
+function newGridSize() {
+  let newSize = prompt("What size would you like your Etch-a-Sketch to be?");
+  let desiredValue = parseInt(newSize);
+  if (desiredValue > 1 && desiredValue <= 100) {
+    size = newSize;
+    clearGrid();
+    createGrid();
+  } else {
+    alert("Please only enter a number from 1 to 100!");
+  }
 }
 
-newGridSize();
+
 
 
 
