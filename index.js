@@ -23,9 +23,13 @@ function changeColor (event) {
   square.style.backgroundColor = 'black';
 }
 
-function clearGrid() {
-  clearButton.addEventListener('click', () =>
-    location.reload());
+clearButton.addEventListener("click", clearGrid);
+
+function clearGrid(){
+  let clearGrid = document.querySelectorAll('.square');
+  clearGrid.forEach(element => {
+      element.style.backgroundColor = 'white';
+  });
 }
 
 clearGrid();
